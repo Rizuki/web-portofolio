@@ -35,6 +35,7 @@ body {
     background: linear-gradient(90deg, rgba(2,1,19,1) 0%, rgb(1, 15, 29) 50%, rgba(3,3,31,1) 100%);
     font-family: 'IBM Plex Mono';
 	height: 100vh;
+	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -272,7 +273,7 @@ section .hero-text {
 section .hero-picture {
     /* border: 1px solid white; */
     width: 50vw;
-    height: 68vh;
+    height: 70vh;
     background-image: url("../images/hero-picture.jpg");
     background-position: center;
     background-size: cover;
@@ -282,8 +283,19 @@ section .hero-picture {
     mask-position: center;
     mask-repeat: no-repeat;
 	box-sizing: border-box;
+	animation: bounce 2s alternate cubic-bezier( 
+		.5, 0.05, 1, .5) infinite;
+	animation-delay: 3000ms;
 }
 
+@keyframes bounce { 
+	0% { 
+		transform: translate3d(0, 0, 0); 
+	} 
+	100%{
+		transform: translate3d(0, 3vh, 0); 
+	}
+}
 .hero-text .hero-social {
     /* border: 1px solid white; */
 	box-sizing: border-box;
