@@ -190,6 +190,10 @@ body nav .navbar-menu .navbar-menu-item {
 	padding: 5px;
 }
 
+.navbar-menu-chat .bx-message-rounded-dots {
+	font-size: 1.5vh;
+}
+
 
 /* Hero Start Here */
 
@@ -266,13 +270,13 @@ section .hero-text {
 section .hero-picture {
     /* border: 1px solid white; */
     width: 50vw;
-    height: 80vh;
+    height: 70vh;
     background-image: url("../images/hero-picture.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     mask-image: url("../images/splash2.svg");
-    mask-size: 115%;
+    mask-size: 100%;
     mask-position: center;
     mask-repeat: no-repeat;
 }
