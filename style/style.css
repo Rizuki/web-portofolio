@@ -55,40 +55,56 @@ table {
 
 /* CSS Reset End Here */
 
+:root {
+	--orange-color-alpha : rgba(245, 140, 98, 0.5);
+	--orange-color-solid : rgba(245, 140, 98, 1);
+	--blue-color-solid : rgba(5, 188, 243);
+	--blue-color-alpha : rgba(5, 188, 243, 0.5);
+}
+
 .navbar-container {
 	background-color: rgba(0,0,0,0.3);
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 7vh;
-	width: 100%;
+	height: 8vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid rgba(5, 188, 243, 0.5);
 	box-sizing: border-box;
-	box-shadow: 0 1px 15px rgba(5, 188, 243, 0.5);
+	border-bottom: 1px solid var(--blue-color-alpha);
+	box-shadow: 0 1px 15px var(--blue-color-alpha);
 	z-index: 999;
 }
 
 body nav .navbar-title {
-	border-radius: 10px;
-	padding: 10px 8%;
-	font-size: 2rem;
+	/* border: 1px solid white; */
+	padding: 2vh 10vw 2vh 10vw;
+	font-size: 3vh;
 	font-weight: 700;
-	color: rgba(5, 188, 243);
-	text-shadow: 0 0 10px rgba(5, 188, 243, 0.5),
-				 0 0 30px rgba(5, 188, 243, 0.5),
-				 0 0 60px rgba(5, 188, 243, 0.5);
+	color: var(--blue-color-solid);
+	text-shadow: 0 0 10px var(--blue-color-alpha),
+				 0 0 30px var(--blue-color-alpha),
+				 0 0 60px var(--blue-color-alpha),
+				 0 0 120px var(--blue-color-alpha);
 	text-align: center;
 }
 
+body nav .navbar-title span{
+	color: var(--orange-color-solid);
+	text-shadow: 0 0 10px var(--orange-color-alpha),
+				 0 0 30px var(--orange-color-alpha),
+				 0 0 60px var(--orange-color-alpha),
+				 0 0 120px var(--orange-color-alpha);
+}
+
 body nav .navbar-menu {
-	width: 20rem;
-	height: 6rem;
+	/* border: 1px solid white; */
+	width: 20vw;
+	height: 7vh;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	padding: 10px;
 	box-sizing: border-box;
@@ -99,11 +115,11 @@ body nav .navbar-menu .navbar-menu-item {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	line-height: 5rem;
+	line-height: 5vh;
 }
 
 .menu-icon {
-	font-size: 1.3rem;
+	font-size: 2.5vh;
 	color: white;
 	opacity: 0.4;
 	transition: 0.5s;
@@ -112,48 +128,48 @@ body nav .navbar-menu .navbar-menu-item {
 .menu-text {
 	position: absolute;
 	color: white;
-	font-size: 0.8rem;
+	font-size: 1vh;
 	font-weight: 500;
 	opacity: 0;
-    top: 4px;
+    top: 3vh;
 	transition: 0.5s;
 }
 
 .navbar-menu .navbar-menu-item:hover .menu-icon {
-	transform: translateY(-8px);
+	transform: translateY(-0.4vh);
     color: rgba(5, 188, 243);
-	text-shadow: 0 0 15px rgba(5, 188, 243, 0.7),
-				 0 0 30px rgba(5, 188, 243, 0.7),
-				 0 0 45px rgba(5, 188, 243, 0.7),
-				 0 0 60px rgba(5, 188, 243, 0.7);
+	text-shadow: 0 0 15px var(--blue-color-alpha),
+				 0 0 30px var(--blue-color-alpha),
+				 0 0 45px var(--blue-color-alpha),
+				 0 0 60px var(--blue-color-alpha);
 	opacity: 1;
 }
 
 .navbar-menu .navbar-menu-item:hover .menu-text {
     color: rgba(5, 188, 243);
-	text-shadow: 0 0 5px rgba(5, 188, 243, 0.7),
-				 0 0 10px rgba(5, 188, 243, 0.7),
-				 0 0 15px rgba(5, 188, 243, 0.7),
-				 0 0 20px rgba(5, 188, 243, 0.7);
+	text-shadow: 0 0 5px var(--blue-color-alpha),
+				 0 0 10px var(--blue-color-alpha),
+				 0 0 15px var(--blue-color-alpha),
+				 0 0 20px var(--blue-color-alpha);
 	opacity: 1;
 }
 
 .navbar-menu .navbar-menu-item.active .menu-icon {
-	transform: translateY(-8px);
+	transform: translateY(-0.4vh);
     color: rgba(5, 188, 243);
-	text-shadow: 0 0 15px rgba(5, 188, 243, 0.7),
-				 0 0 30px rgba(5, 188, 243, 0.7),
-				 0 0 45px rgba(5, 188, 243, 0.7),
-				 0 0 60px rgba(5, 188, 243, 0.7);
+	text-shadow: 0 0 15px var(--blue-color-alpha),
+				 0 0 30px var(--blue-color-alpha),
+				 0 0 45px var(--blue-color-alpha),
+				 0 0 60px var(--blue-color-alpha);
 	opacity: 1;
 }
 
 .navbar-menu .navbar-menu-item.active .menu-text {
     color: rgba(5, 188, 243);
-	text-shadow: 0 0 5px rgba(5, 188, 243, 0.7),
-				 0 0 10px rgba(5, 188, 243, 0.7),
-				 0 0 15px rgba(5, 188, 243, 0.7),
-				 0 0 20px rgba(5, 188, 243, 0.7);
+	text-shadow: 0 0 5px var(--blue-color-alpha),
+				 0 0 10px var(--blue-color-alpha),
+				 0 0 15px var(--blue-color-alpha),
+				 0 0 20px var(--blue-color-alpha);
 	opacity: 1;
 }
 
@@ -161,13 +177,13 @@ body nav .navbar-menu .navbar-menu-item {
 	display: flex;
 	align-items: flex-end;
 	border-radius: 10px;
-	padding: 10px 8%;
+	padding: 2vh 10vw 2vh 10vw;
 	color: rgba(5, 188, 243);
-	font-size: 1rem;
+	font-size: 1vh;
 	font-weight: 500;
-	text-shadow: 0 0 10px rgba(5, 188, 243, 0.5),
-                 0 0 30px rgba(5, 188, 243, 0.5),
-                 0 0 60px rgba(5, 188, 243, 0.5);
+	text-shadow: 0 0 10px var(--blue-color-alpha),
+                 0 0 30px var(--blue-color-alpha),
+                 0 0 60px var(--blue-color-alpha);
 }
 
 .navbar-menu-chat span {
@@ -178,56 +194,70 @@ body nav .navbar-menu .navbar-menu-item {
 /* Hero Start Here */
 
 .hero {
+	/* border: 1px solid white; */
     position: absolute;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin-top: 8vh;
     width: 100%;
     height: 92vh;
+	padding: 0 15vw;
     box-sizing: border-box;
-    padding: 18rem;
 }
 
 section .hero-text {
     /* border: 1px solid white; */
     width: 30vw;
     color: white;
+	/* padding-left: 12%; */
+	box-sizing: border-box;
 }
 
-.hero-text h1 {
+.hero-text h1, .hero-text h2 {
     font-family: 'IBM Plex Mono';
     font-weight: 700;
-    font-size: 3rem;
-    line-height: 3.5rem;
-    color: rgb(5, 188, 243);
+    font-size: 3vh;
+    line-height: 5vh;
+    color: var(--blue-color-solid);
 }
 
 .hero-text .hero-name {
+	line-height: 5vh;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
-				 0 0 30px rgba(5, 188, 243, 0.5),
-				 0 0 45px rgba(5, 188, 243, 0.5),
-				 0 0 60px rgba(5, 188, 243, 0.5);
+				 0 0 30px var(--blue-color-alpha),
+				 0 0 45px var(--blue-color-alpha),
+				 0 0 60px var(--blue-color-alpha);
 }
 
-.hero-text h1 span {
-    color: rgba(245, 140, 98, 0.9);
+.hero-text .name {
+	font-size: 6vh;
 }
 
-.hero-text h1 .input {
+.hero-text .hero-name span, .hero-text .input {
+	color: rgba(245, 140, 98, 0.9);
+    text-shadow: 0 0 15px var(--orange-color-alpha),
+				 0 0 30px var(--orange-color-alpha),
+				 0 0 45px var(--orange-color-alpha),
+				 0 0 60px var(--orange-color-alpha);
+}
+
+
+.hero-text h2 .input {
     font-family: 'Share Tech';
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1vw;
+	color:rgba(245, 140, 98,1);
 }
 
-.hero-text h4 {
+.hero-text h3 {
     font-family: 'Share Tech';
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.6vh;
+    line-height: 3vh;
     letter-spacing: 0.1rem;
     color: white;
 }
 
-.hero-text h4 span {
+.hero-text h3 span {
     letter-spacing: 0.2rem;
     color: rgba(245, 140, 98, 0.9);
     font-weight: 700;
@@ -235,7 +265,7 @@ section .hero-text {
 
 section .hero-picture {
     /* border: 1px solid white; */
-    width: 40vw;
+    width: 50vw;
     height: 80vh;
     background-image: url("../images/hero-picture.jpg");
     background-position: center;
@@ -247,6 +277,38 @@ section .hero-picture {
     mask-repeat: no-repeat;
 }
 
-.hero-social a {
-    color: white;
+.hero-text .hero-social {
+    /* border: 1px solid white; */
+	box-sizing: border-box;
+	/* padding-top: 2vh; */
+	display: flex;
+	align-items: center;
+	width: 60%;
+	font-size: 2vh;
+	line-height: 3vh;
+	margin-top: 2vh;
+}
+
+.hero-text .hero-social a {
+    /* border: 1px solid rgb(2, 1, 19); */
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	padding: 1vh;
+	margin-right: 1vw;
+	color: white;
+	border-radius: 40%;
+	color: rgb(2, 1, 19);
+	text-shadow: 0 0 15px var(--orange-color-solid),
+				 0 0 30px var(--orange-color-solid),
+				 0 0 45px var(--orange-color-solid),
+				 0 0 80px var(--orange-color-solid);
+	box-shadow: 0 0 15px var(--orange-color-alpha),
+				0 0 30px var(--orange-color-alpha);
+	transition: 0.5s;
+	box-sizing: border-box;
+}
+
+.hero-text .hero-social a:hover {
+	background-color: var(--orange-color-solid);
 }
