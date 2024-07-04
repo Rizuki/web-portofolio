@@ -32,7 +32,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    /* background: linear-gradient(90deg, rgba(2,1,19,1) 20%, rgba(2,1,20,1) 17%, rgb(3, 28, 75) 50%, rgb(1, 4, 20) 100%); */
     background: linear-gradient(90deg, rgba(2,1,19,1) 0%, rgb(1, 15, 29) 50%, rgba(3,3,31,1) 100%);
     font-family: 'IBM Plex Mono';
 	height: 100vh;
@@ -120,14 +119,18 @@ body nav .navbar-menu .navbar-menu-item {
 
 .menu-icon {
 	font-size: 1.4vw;
-	color: white;
-	opacity: 0.4;
+	color: var(--blue-color-solid);
+	opacity: 0.8;
 	transition: 0.5s;
+	text-shadow: 0 0 15px var(--blue-color-alpha),
+				 0 0 30px var(--blue-color-alpha),
+				 0 0 45px var(--blue-color-alpha),
+				 0 0 60px var(--blue-color-alpha);
 }
 
 .menu-text {
 	position: absolute;
-	color: white;
+	color: var(--blue-color-solid);
 	font-size: 0.7vw;
 	font-weight: 500;
 	opacity: 0;
@@ -137,39 +140,39 @@ body nav .navbar-menu .navbar-menu-item {
 
 .navbar-menu .navbar-menu-item:hover .menu-icon {
 	transform: translateY(-0.4vh);
-    color: rgba(5, 188, 243);
-	text-shadow: 0 0 15px var(--blue-color-alpha),
-				 0 0 30px var(--blue-color-alpha),
-				 0 0 45px var(--blue-color-alpha),
-				 0 0 60px var(--blue-color-alpha);
+    color: var(--orange-color-solid);
+	text-shadow: 0 0 15px var(--orange-color-alpha),
+				 0 0 30px var(--orange-color-alpha),
+				 0 0 45px var(--orange-color-alpha),
+				 0 0 60px var(--orange-color-alpha);
 	opacity: 1;
 }
 
 .navbar-menu .navbar-menu-item:hover .menu-text {
-    color: rgba(5, 188, 243);
-	text-shadow: 0 0 5px var(--blue-color-alpha),
-				 0 0 10px var(--blue-color-alpha),
-				 0 0 15px var(--blue-color-alpha),
-				 0 0 20px var(--blue-color-alpha);
+    color: var(--orange-color-solid);
+	text-shadow: 0 0 15px var(--orange-color-alpha),
+				 0 0 30px var(--orange-color-alpha),
+				 0 0 45px var(--orange-color-alpha),
+				 0 0 60px var(--orange-color-alpha);
 	opacity: 1;
 }
 
 .navbar-menu .navbar-menu-item.active .menu-icon {
 	transform: translateY(-0.4vh);
-    color: rgba(5, 188, 243);
-	text-shadow: 0 0 15px var(--blue-color-alpha),
-				 0 0 30px var(--blue-color-alpha),
-				 0 0 45px var(--blue-color-alpha),
-				 0 0 60px var(--blue-color-alpha);
+    color: var(--orange-color-solid);
+	text-shadow: 0 0 15px var(--orange-color-alpha),
+				 0 0 30px var(--orange-color-alpha),
+				 0 0 45px var(--orange-color-alpha),
+				 0 0 60px var(--orange-color-alpha);
 	opacity: 1;
 }
 
 .navbar-menu .navbar-menu-item.active .menu-text {
-    color: rgba(5, 188, 243);
-	text-shadow: 0 0 5px var(--blue-color-alpha),
-				 0 0 10px var(--blue-color-alpha),
-				 0 0 15px var(--blue-color-alpha),
-				 0 0 20px var(--blue-color-alpha);
+    color: var(--orange-color-solid);
+	text-shadow: 0 0 15px var(--orange-color-alpha),
+				 0 0 30px var(--orange-color-alpha),
+				 0 0 45px var(--orange-color-alpha),
+				 0 0 60px var(--orange-color-alpha);
 	opacity: 1;
 }
 
@@ -214,7 +217,6 @@ section .hero-text {
     /* border: 1px solid white; */
     width: 30vw;
     color: white;
-	/* padding-left: 12%; */
 	box-sizing: border-box;
 }
 
@@ -270,7 +272,7 @@ section .hero-text {
 section .hero-picture {
     /* border: 1px solid white; */
     width: 50vw;
-    height: 70vh;
+    height: 68vh;
     background-image: url("../images/hero-picture.jpg");
     background-position: center;
     background-size: cover;
@@ -279,12 +281,12 @@ section .hero-picture {
     mask-size: 100%;
     mask-position: center;
     mask-repeat: no-repeat;
+	box-sizing: border-box;
 }
 
 .hero-text .hero-social {
     /* border: 1px solid white; */
 	box-sizing: border-box;
-	/* padding-top: 2vh; */
 	display: flex;
 	align-items: center;
 	width: 60%;
@@ -307,12 +309,12 @@ section .hero-picture {
 				 0 0 30px var(--orange-color-solid),
 				 0 0 45px var(--orange-color-solid),
 				 0 0 80px var(--orange-color-solid);
-	box-shadow: 0 0 15px var(--orange-color-alpha),
-				0 0 30px var(--orange-color-alpha);
+	box-shadow: 0 0 15px var(--orange-color-alpha);
 	transition: 0.5s;
 	box-sizing: border-box;
 }
 
 .hero-text .hero-social a:hover {
 	background-color: var(--orange-color-solid);
+	box-shadow: 0 0 15px 15px var(--orange-color-alpha);
 }
