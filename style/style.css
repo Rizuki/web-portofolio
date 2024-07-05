@@ -79,25 +79,34 @@ table {
 }
 
 body nav .navbar-title {
-	/* border: 1px solid white; */
-	padding: 2vh 10vw 2vh 10vw;
+	margin: 3vh 10vw 2vh 13vw;
 	font-size: 3vh;
 	font-weight: 700;
-	color: var(--blue-color-solid);
+	color: rgba(0, 0, 0, 1);
 	text-shadow: 0 0 10px var(--blue-color-alpha),
-				 0 0 30px var(--blue-color-alpha),
-				 0 0 60px var(--blue-color-alpha),
-				 0 0 120px var(--blue-color-alpha);
+				 0 0 20px var(--blue-color-alpha),
+				 0 0 40px var(--blue-color-alpha);
 	text-align: center;
 }
 
-body nav .navbar-title span{
+body nav .navbar-title .izq {
+	transition: 0.3s;
+}
+
+body nav .navbar-title:hover .izq {
+	color: var(--blue-color-solid);
+	opacity: 1;
+}
+
+body nav .navbar-title .r{
+	font-size: 3.5vh;
 	color: var(--orange-color-solid);
 	text-shadow: 0 0 10px var(--orange-color-alpha),
 				 0 0 30px var(--orange-color-alpha),
 				 0 0 60px var(--orange-color-alpha),
 				 0 0 120px var(--orange-color-alpha);
 }
+
 
 body nav .navbar-menu {
 	/* border: 1px solid white; */
@@ -179,25 +188,41 @@ body nav .navbar-menu .navbar-menu-item {
 }
 
 .navbar-menu-chat {
-	display: flex;
-	align-items: flex-end;
-	border-radius: 10px;
-	padding: 2vh 10vw 2vh 10vw;
+	font-family: "Share Tech", sans-serif;
+	padding: 0.5vh;
+	margin: 3vh 13vw 2vh 10vw;
 	color: rgba(5, 188, 243);
-	font-size: 1.7vh;
+	font-size: 1.9vh;
 	font-weight: 500;
 	text-shadow: 0 0 10px var(--blue-color-alpha),
                  0 0 30px var(--blue-color-alpha),
                  0 0 60px var(--blue-color-alpha);
+	transition: 0.2s;
 }
 
-.navbar-menu-chat span {
-	padding: 5px;
-    font-family: "Share Tech", sans-serif;
+.navbar-menu-chat::after {
+	content: '';
+	display: block;
+	padding-bottom: 0.5vh;
+	border-bottom: 2px solid var(--orange-color-solid);
+	transform: scaleX(0);
+	transition: 0.2s;
 }
 
 .navbar-menu-chat .bx-message-rounded-dots {
 	font-size: 2vh;
+}
+
+.navbar-menu-chat:hover {
+	color: var(--orange-color-solid);
+	text-shadow: 0 0 15px var(--orange-color-alpha),
+				 0 0 30px var(--orange-color-alpha),
+				 0 0 45px var(--orange-color-alpha),
+				 0 0 60px var(--orange-color-alpha);
+}
+
+.navbar-menu-chat:hover::after {
+	transform: scaleX(90%);
 }
 
 
@@ -226,9 +251,16 @@ section .hero-text {
 .hero-text h1, .hero-text h2 {
     font-family: 'IBM Plex Mono';
     font-weight: 700;
-    font-size: 3vh;
     line-height: 5vh;
     color: var(--blue-color-solid);
+}
+
+.hero-text h1 {
+	font-size: 5vh;
+}
+
+.hero-text h2 {
+	font-size: 4vh;
 }
 
 .hero-text .hero-name {
@@ -260,7 +292,7 @@ section .hero-text {
 
 .hero-text h3 {
     font-family: 'Share Tech';
-    font-size: 1.6vh;
+    font-size: 1.8vh;
     line-height: 3vh;
     letter-spacing: 0.1rem;
     color: white;
@@ -304,7 +336,7 @@ section .hero-picture {
 	display: flex;
 	align-items: center;
 	width: 60%;
-	font-size: 2vh;
+	font-size: 2.4vh;
 	line-height: 3vh;
 	margin-top: 2vh;
 }
