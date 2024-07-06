@@ -244,7 +244,6 @@ body nav .navbar-menu .navbar-menu-item {
 section .hero-text {
     /* border: 1px solid white; */
     width: 30vw;
-    color: white;
 	box-sizing: border-box;
 }
 
@@ -348,7 +347,6 @@ section .hero-picture {
 	align-items: center;
 	padding: 1vh;
 	margin-right: 1vw;
-	color: white;
 	border-radius: 40%;
 	color: rgb(2, 1, 19);
 	text-shadow: 0 0 15px var(--orange-color-solid),
