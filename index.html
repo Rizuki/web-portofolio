@@ -20,24 +20,27 @@
     rel="stylesheet">
     <!-- End Font IBM Plex Mono -->
 
+    <!-- Google Font Bona Nova SC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <!-- End of Bona Nova SC -->
+
     <!-- Remix Icons -->
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <!-- End of Remix Icons -->
 
     <!-- Box Icons -->
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!-- End of Box Icons -->
 
 
     <!-- Link Init Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-
+    <!-- Link CSS -->
     <link href='style/style.css' rel='stylesheet'>
+
 </head>
 <body>
 
@@ -47,15 +50,15 @@
             <span class="r">.R</span><span class="izq">izQ</span>
         </a>
         <div class="navbar-menu">
-        <a href="#" class="navbar-menu-item active">
+        <a href="#home-content" class="navbar-menu-item menu-active">
             <span class="menu-icon"><i class='bx bx-home-alt'></i></span>
             <span class="menu-text">Home</span>
         </a>
-        <a href="#" class="navbar-menu-item">
+        <a href="#profile-content" class="navbar-menu-item">
             <span class="menu-icon"><i class='bx bx-user'></i></span>
             <span class="menu-text">Profile</span>
         </a>
-        <a href="#" class="navbar-menu-item">
+        <a href="#contact-content" class="navbar-menu-item">
             <span class="menu-icon"><i class='bx bx-phone' ></i></span>
             <span class="menu-text">Contact</span>
         </a>
@@ -67,8 +70,8 @@
     </nav>
     <!-- Navigation End Here -->
 
-    <!-- Hero Section Start Here -->
-    <section class="hero" id="home-content">
+    <!-- Hero Home Start Here -->
+    <section class="hero home hero-active" id="home-content" >
         <div class="hero-text">
             <h2 data-aos="fade-right" data-aos-duration="2000" class="hero-name">Hi,</h1>
             <h1 data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500" class="hero-name name">I'm <span>Rizki</span></h1>
@@ -77,7 +80,7 @@
             <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2000" class="hero-social">
                 <a href="mailto:rizky.senpai@gmail.com"><i class='bx bxl-gmail'></i></a>
                 <a href="https://www.linkedin.com/in/muhamad-rizq/"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://www.instagram.com/just.rizq/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.instagram.com/just.rizq/"><i class='bx bxl-instagram-alt'></i></a>
                 <a href="https://discordapp.com/users/458150729593651201"><i class='bx bxl-discord-alt' ></i></a>
             </div>
         </div>
@@ -85,8 +88,22 @@
             
         </div>
     </section>
-    <!-- Hero Section End Here -->
+    <!-- Hero Home End Here -->
 
+    <!-- Hero Profile Start Here -->
+    <section class="hero profile" id="profile-content">
+        <div>
+            <h1>TEST PROFILE</h1>
+        </div>
+    </section>
+    <!-- Hero Profile End Here -->
+
+    <!-- Hero Contact Start Here -->
+    <section class="hero contact" id="contact-content">
+        <div>
+            <h1>TEST CONTACT</h1>
+        </div>
+    </section>
 
 
     <!-- Javascript Init Animation -->

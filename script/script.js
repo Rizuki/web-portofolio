@@ -3,23 +3,31 @@
 let typed = new Typed(".input", {
     strings:["Network Engineer."],
     typeSpeed:50,
-    backSpeed:40,
+    backSpeed:30,
     loop:true
 })
 
-
 // Script Active Menu
-const menuActive = document.querySelectorAll(".navbar-menu-item");
+const menuList = document.querySelectorAll(".navbar-menu-item");
+const heroSectionActive = document.querySelectorAll(".hero")
 
-menuActive.forEach((link) => {
-    link.addEventListener("click",(event) => {
-        activeLink(link);
+menuList.forEach((link, index) => {
+    link.addEventListener("click",() => {
+        activateLink(link);
+        heroActivate(index);
     })
 })
 
-function activeLink(linkActive){
-    menuActive.forEach(link => {
-        link.classList.remove("active");
-        linkActive.classList.add("active");
+function activateLink(linkActive, index){
+    menuList.forEach(link => {
+        link.classList.remove("menu-active");
+        linkActive.classList.add("menu-active");
+    })
+}
+
+function heroActivate(index) {
+    heroSectionActive.forEach(list => {
+        list.classList.remove("hero-active");
+        heroSectionActive[index].classList.add("hero-active");
     })
 }
