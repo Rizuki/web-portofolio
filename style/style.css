@@ -63,7 +63,7 @@ table {
 	--orange-text-shadow : 0 0 15px var(--orange-color-alpha),
 						   0 0 30px var(--orange-color-alpha),
 						   0 0 45px var(--orange-color-alpha),
-						   0 0 60px var(--orange-color-alpha);
+						   0 0 60px var(--orange-color-solid);
 	--blue-text-shadow : 0 0 15px var(--blue-color-alpha),
 						 0 0 30px var(--blue-color-alpha),
 						 0 0 45px var(--blue-color-alpha),
@@ -325,14 +325,14 @@ section .hero-picture {
 	border-radius: 40%;
 	color: rgb(2, 1, 19);
 	text-shadow: var(--orange-text-shadow);
-	box-shadow: 0 0 15px var(--orange-color-alpha);
+	box-shadow: 0 0 10px var(--orange-color-alpha);
 	transition: 0.3s;
 	box-sizing: border-box;
 }
 
 .hero-text .hero-social a:hover {
 	background-color: var(--orange-color-solid);
-	box-shadow: 0 0 15px 15px var(--orange-color-alpha);
+	box-shadow: 0 0 10px 10px var(--orange-color-alpha);
 }
 
 .hero.profile, .hero.contact {
@@ -363,7 +363,7 @@ section .hero-picture {
 	box-shadow: 0 0px 10px var(--blue-color-alpha);
 	transition: 0.2s ease-out;
 	animation: flip 2s cubic-bezier(0.2, 0.21, 0.8, 1.5);
-	animation-delay: 1s;
+	animation-delay: 0.5s;
 }
 
 .profile .card:hover {
