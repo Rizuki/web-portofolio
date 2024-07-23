@@ -283,7 +283,6 @@ section .hero-text {
 }
 
 section .hero-picture {
-    /* border: 1px solid white; */
     width: 50vw;
     height: 70vh;
     background-image: url("../images/hero-picture.jpg");
@@ -351,51 +350,67 @@ section .hero-picture {
 	justify-content: space-evenly;
 }
 
-.profile .card {
-	border-radius: 20px;
+.profile .profile-card {
+	border-radius: 15%;
 	height: 30vh;
 	width: 25vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
-	border: 1px solid var(--blue-color-alpha);
-	box-shadow: 0 0px 10px var(--blue-color-alpha);
-	transition: 0.2s ease-out;
+	justify-content: space-evenly	;
+	box-shadow: 0 0px 20px var(--blue-color-alpha);
+	transition: 0.3s ease-out;
 	animation: flip 2s cubic-bezier(0.2, 0.21, 0.8, 1.5);
 	animation-delay: 0.5s;
 }
 
-.profile .card:hover {
+.profile .profile-card:hover {
 	transform: translateY(-1.5vh);
-	box-shadow: 0 0px 10px 10px var(--blue-color-alpha);
+	box-shadow: 0 0px 20px 20px var(--orange-color-alpha);
+	cursor: pointer;
 }
 
-.profile-picture {
+.profile .profile-card:hover .card-text {
+	color: var(--orange-color-solid);
+}
+
+.profile .profile-card:hover .card-text::after {
+	opacity: 1;
+	transform: scaleX(90%);
+}
+
+.profile-picture, .career-picture {
 	border-radius: 20%;
-	background-image: url("../images/profile-picture.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	width: 70%;
-	height: 55%;
+	width: 80%;
+	height: 65%;
+}
+.profile-picture {
+	background-image: url("../images/profile-picture.png");
 }
 
 .career-picture {
-	border-radius: 20%;
 	background-image: url("../images/roadmap2.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 70%;
-	height: 55%;
 }
 
 .card-text {
 	font-family: "Share Tech", sans-serif;
 	color: var(--blue-color-alpha);
-	font-size: 1.8vh;
+	font-size: 2vh;
 	letter-spacing: 0.1vh;
 	font-weight: 700;
 	transition: 0.3s;
+}
+
+.card-text::after {
+	content: '';
+	display: block;
+	border-bottom: 3px solid var(--orange-color-solid);
+	padding-bottom: 0.5vh;
+	transform: scaleX(0);
+	transition: 0.3s ease-out;
+	opacity: 0;
 }
 
 .detail-option {
@@ -422,7 +437,7 @@ section .hero-picture {
 
 
 
-
+/* List Animations */
 
 @keyframes bounce { 
 	0% { 
